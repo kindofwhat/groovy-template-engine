@@ -1,16 +1,15 @@
 package info.magnolia.groovy.template
 
-import com.google.inject.Inject
 import groovy.text.markup.BaseTemplate
 import groovy.text.markup.MarkupTemplateEngine
 import groovy.text.markup.TemplateConfiguration
 import groovy.transform.CompileStatic
-import info.magnolia.cms.beans.config.ServerConfiguration
 import info.magnolia.objectfactory.Components
 import info.magnolia.rendering.engine.RenderingEngine
 import info.magnolia.templating.elements.AreaElement
 import info.magnolia.templating.elements.ComponentElement
 import info.magnolia.templating.elements.InitElement
+import javax.jcr.Node as JcrNode
 
 /**
  * Created by christian on 22.06.14.
@@ -46,18 +45,24 @@ class MagnoliaBaseTemplate extends BaseTemplate {
         element.name=name
         element.begin(out)
         element.end(out)
-//        return this
     }
 
 
-    public void cmsComponent(String name) throws IOException {
+    /**
+     *
+     */
+    public void cmsComponent(Object content) throws IOException {
         ComponentElement element = Components.getComponentProvider().newInstance(ComponentElement.class,
                 Components.getComponent(RenderingEngine.class).renderingContext)
+        element.content = content as JcrNode
         element.begin(out)
         element.end(out)
-//        return this
     }
 
+    @Override
+    public Object methodMissing(String tagName, Object args) throws IOException {
+        return super.methodMissing(tagName,args)
+    }
 
 
 }
