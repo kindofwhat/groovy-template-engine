@@ -1,9 +1,21 @@
 groovy-template-engine
 ======================
 
-A Groovy Renderer for Magnolia CMS
+A Groovy Renderer using for [Magnolia CMS](http://www.magnolia-cms.com) using the excellent [MarkupTemplateEngine](groovy-lang.org/docs/groovy-2.3.2/html/documentation/markup-template-engine.html)
 
-Can be installed as Magnolia Module, together with some sample content.
+## But why, oh why?
+[Groovy](http://groovy-lang.org) is an excellent language for the jvm. [Magnolia CMS](http://www.magnolia-cms.com) is a 
+very cool open source CMS for the jvm. Let's explore how to combine those two technologies.
+
+### What are the advantages over other templating languages?
+The Groovy [MarkupTemplateEngine](groovy-lang.org/docs/groovy-2.3.2/html/documentation/markup-template-engine.html) is 
+consisting of plain Groovy code. This means that it
+
+* can be compiled (even type checked)
+* can be debugged (yes, set a breakpoint in that template)
+* easily extended
+
+Or put another way: it would be a shame to not combine such cool technolgies :)
 
 ## Prerequisites
 * [git](http://git-scm.com/)
