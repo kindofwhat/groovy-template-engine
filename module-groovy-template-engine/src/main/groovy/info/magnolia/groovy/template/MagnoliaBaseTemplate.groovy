@@ -12,7 +12,7 @@ import info.magnolia.templating.elements.InitElement
 import javax.jcr.Node as JcrNode
 
 /**
- * Created by christian on 22.06.14.
+ * Adds some Magnolia specific methods
  */
 @CompileStatic
 class MagnoliaBaseTemplate extends BaseTemplate {
@@ -26,7 +26,7 @@ class MagnoliaBaseTemplate extends BaseTemplate {
     }
 
     /**
-     * equivalent to a @cms:init call
+     * equivalent to a @cms.init call
      */
     public BaseTemplate cmsInit() throws IOException {
         InitElement element = Components.getComponentProvider().newInstance(InitElement.class,
@@ -37,7 +37,7 @@ class MagnoliaBaseTemplate extends BaseTemplate {
     }
 
     /**
-     * equivalent to a @cms:area call
+     * equivalent to a @cms.area call
      */
     public void cmsArea(String name) throws IOException {
         AreaElement element = Components.getComponentProvider().newInstance(AreaElement.class,
@@ -49,12 +49,13 @@ class MagnoliaBaseTemplate extends BaseTemplate {
 
 
     /**
-     *
+     * equivalent to a @cms.component call
      */
-    public void cmsComponent(Object content) throws IOException {
+    public void cmsComponent(Object content, Map<String, Object> contextAttributes=null) throws IOException {
         ComponentElement element = Components.getComponentProvider().newInstance(ComponentElement.class,
                 Components.getComponent(RenderingEngine.class).renderingContext)
         element.content = content as JcrNode
+        if(contextAttributes) element.contextAttributes = contextAttributes
         element.begin(out)
         element.end(out)
     }

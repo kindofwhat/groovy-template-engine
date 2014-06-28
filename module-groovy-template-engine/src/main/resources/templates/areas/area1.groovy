@@ -1,7 +1,8 @@
+div {
 
+    p("Here be an Area, and where are se components?!?")
 
-p("Here be an Area, and where are se components?!?")
-
-components.each {
-    cmsComponent(it.getJCRNode())
+    components.each {
+        cmsComponent(it.getJCRNode())
+    }
 }

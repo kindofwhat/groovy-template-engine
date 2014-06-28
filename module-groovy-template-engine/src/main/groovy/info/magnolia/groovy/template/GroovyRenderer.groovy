@@ -13,7 +13,7 @@ import info.magnolia.rendering.renderer.AbstractRenderer
 import info.magnolia.rendering.template.RenderableDefinition
 
 /**
- * Created by christian on 15.06.14.
+ * The renderer itself
  */
 @CompileStatic
 class GroovyRenderer extends AbstractRenderer  {
@@ -32,13 +32,12 @@ class GroovyRenderer extends AbstractRenderer  {
 
         MarkupTemplateEngine engine = new MarkupTemplateEngine(config)
 
-//        Template template = engine.createTemplate("p('test template')")
         Template template = engine.createTemplateByPath(templateScript);
         Map<String, Object> model = ctx
         model.c =  content
+        model.ctx=MgnlContext.getInstance()
         Writable output = template.make(model)
         output.writeTo(renderingCtx.appendable)
-
     }
 
 }
