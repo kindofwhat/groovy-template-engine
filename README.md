@@ -41,7 +41,11 @@ and find an example under [http://localhost:8080/gte/.magnolia/admincentral#app:
 * it is strongly suggested to create your own magnolia module with the Magnolia [maven archetype](https://wiki.magnolia-cms.com/display/WIKI/Module+QuickStar
 * add the following dependency to your project pom: 
 ```xml
-https://wiki.magnolia-cms.com/display/WIKI/Module+QuickStart
+   <dependency>
+          <groupId>info.magnolia</groupId>
+          <artifactId>module-groovy-template-engine</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
 ```
 * create your pages with definitions, areas, components as usual (more details in the Magnolia docu)
 
