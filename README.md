@@ -38,7 +38,11 @@ Then open up a browser onto [http://localhost:8080/gte](http://localhost:8080/gt
 and find an example under [http://localhost:8080/gte/.magnolia/admincentral#app:pages:detail;/grhome:edit](http://localhost:8080/gte/.magnolia/admincentral#app:pages:detail;/grhome:edit)
 
 ## Development Workflow
-* it is strongly suggested to create a own magnolia module 
+* it is strongly suggested to create your own magnolia module with the Magnolia [maven archetype](https://wiki.magnolia-cms.com/display/WIKI/Module+QuickStar
+* add the following dependency to your project pom: 
+```xml
+https://wiki.magnolia-cms.com/display/WIKI/Module+QuickStart
+```
 * create your pages with definitions, areas, components as usual (more details in the Magnolia docu)
 
 
