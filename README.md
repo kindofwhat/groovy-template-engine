@@ -31,7 +31,7 @@ cd groovy-template-engine
 mvn clean package
 java -jar groovy-template-engine-webapp/target/groovy-template-engine.jar
 ```
-Then open up a browser onto [http://localhost:8080/gte](http://http://localhost:8080/gte), install magnolia, 
+Then open up a browser onto [http://localhost:8080/gte](http://localhost:8080/gte), install magnolia, 
 and find an example under [http://localhost:8080/gte/.magnolia/admincentral#app:pages:detail;/grhome:edit](http://localhost:8080/gte/.magnolia/admincentral#app:pages:detail;/grhome:edit)
 
 ## Development Workflow
