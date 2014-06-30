@@ -25,7 +25,7 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2014-06-24T08:38:50.162+02:00</sv:value>
+    <sv:value>2014-06-30T23:16:33.906+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
@@ -37,7 +37,7 @@
     <sv:value>title</sv:value>
   </sv:property>
   <sv:property sv:name="title" sv:type="String">
-    <sv:value>headlines</sv:value>
+    <sv:value>A Groovy Template Blog</sv:value>
   </sv:property>
   <sv:node sv:name="area1">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -64,30 +64,75 @@
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+  </sv:node>
+  <sv:node sv:name="content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:area</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:lockable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>4d2a1a16-ad94-4130-9756-80c4033c413f</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2014-06-30T17:36:49.137+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2014-06-30T17:36:49.137+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:node sv:name="0">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>mgnl:component</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>698e719c-7aa9-4b35-9a27-4c5824fc2184</sv:value>
+        <sv:value>7c8385c7-ae03-4cf1-8eca-a97cc31317db</sv:value>
+      </sv:property>
+      <sv:property sv:name="imageLocation" sv:type="String">
+        <sv:value>above</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:created" sv:type="Date">
-        <sv:value>2014-06-24T08:36:22.999+02:00</sv:value>
+        <sv:value>2014-06-30T17:36:54.197+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:createdBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-        <sv:value>2014-06-24T08:36:22.999+02:00</sv:value>
+        <sv:value>2014-06-30T17:36:54.197+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:template" sv:type="String">
-        <sv:value>groovy-template-engine:components/grHelloWorld</sv:value>
+        <sv:value>groovy-template-engine:components/grBlogPost</sv:value>
+      </sv:property>
+      <sv:property sv:name="subtitle" sv:type="String">
+        <sv:value>Subheading</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value>&lt;p&gt;Where is the what if the what is in why?&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;where&lt;/li&gt;
+	&lt;li&gt;what&lt;/li&gt;
+	&lt;li&gt;what&lt;/li&gt;
+	&lt;li&gt;why&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="00">
@@ -95,25 +140,35 @@
         <sv:value>mgnl:component</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6dd371bc-e623-48b7-abc3-3aca3dc2d267</sv:value>
+        <sv:value>1f01032c-f862-487d-82d1-21a8404acec4</sv:value>
+      </sv:property>
+      <sv:property sv:name="imageLocation" sv:type="String">
+        <sv:value>above</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:created" sv:type="Date">
-        <sv:value>2014-06-24T08:38:50.162+02:00</sv:value>
+        <sv:value>2014-06-30T23:16:33.907+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:createdBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-        <sv:value>2014-06-24T08:38:50.162+02:00</sv:value>
+        <sv:value>2014-06-30T23:16:33.907+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:template" sv:type="String">
-        <sv:value>groovy-template-engine:components/grHelloWorld</sv:value>
+        <sv:value>groovy-template-engine:components/grBlogPost</sv:value>
+      </sv:property>
+      <sv:property sv:name="subtitle" sv:type="String">
+        <sv:value>Lorem</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value>&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

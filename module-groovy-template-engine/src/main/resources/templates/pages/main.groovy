@@ -23,12 +23,12 @@ html(lang:'en') {
       </div>
     </div>
 """
-        div('class':'container') {
-            div('class':'blog-header') {
-                h2('class':'blog-title', "${content.title}")
+        div(class:'container') {
+            div(class:'blog-header') {
+                h2(class:'blog-title', "${content.title}")
             }
-            div('class': 'row') {
-                cmsArea('area1')
+            div(class: 'row') {
+                cmsArea('content')
             }
         }
     }

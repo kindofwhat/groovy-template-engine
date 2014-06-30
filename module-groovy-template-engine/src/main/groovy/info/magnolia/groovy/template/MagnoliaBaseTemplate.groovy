@@ -9,6 +9,9 @@ import info.magnolia.rendering.engine.RenderingEngine
 import info.magnolia.templating.elements.AreaElement
 import info.magnolia.templating.elements.ComponentElement
 import info.magnolia.templating.elements.InitElement
+import info.magnolia.templating.functions.TemplatingFunctions
+import info.magnolia.util.EscapeUtil
+
 import javax.jcr.Node as JcrNode
 
 /**
@@ -63,6 +66,17 @@ class MagnoliaBaseTemplate extends BaseTemplate {
     @Override
     public Object methodMissing(String tagName, Object args) throws IOException {
         return super.methodMissing(tagName,args)
+    }
+
+
+    /**
+     * decodes this string
+     * @param obj the object to be rendered unescaped
+     * @return this template instance
+     * @throws IOException
+     */
+    public BaseTemplate decode(Object obj) throws IOException {
+        return yieldUnescaped(EscapeUtil.unescapeXss(obj.toString()));
     }
 
 

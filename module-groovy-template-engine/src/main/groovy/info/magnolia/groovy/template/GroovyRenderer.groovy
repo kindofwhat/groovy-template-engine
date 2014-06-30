@@ -34,6 +34,7 @@ class GroovyRenderer extends AbstractRenderer  {
 
         Template template = engine.createTemplateByPath(templateScript);
         Map<String, Object> model = ctx
+        model.rm=model.model
         model.c =  content
         model.path=MgnlContext.contextPath
         Writable output = template.make(model)

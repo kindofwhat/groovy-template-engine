@@ -1,7 +1,4 @@
-div {
-
-    p("Here be an Area, and where are se components?!?")
-
+div(class:"col-sm-8 blog-main") {
     components.each {
         cmsComponent(it.getJCRNode())
     }
