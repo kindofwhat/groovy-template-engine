@@ -25,18 +25,23 @@ class GroovyRenderer extends AbstractRenderer  {
     @Override
     protected void onRender(javax.jcr.Node content, RenderableDefinition definition, RenderingContext renderingCtx, Map<String, Object> ctx, String templateScript) throws RenderException {
         TemplateConfiguration config = new TemplateConfiguration()
+        //TODO: make this configurable
         config.cacheTemplates=true
-        config.baseTemplateClass=MagnoliaBaseTemplate.class
         config.autoIndent=true
         config.autoNewLine=true
+
+        config.baseTemplateClass=MagnoliaBaseTemplate.class
 
         MarkupTemplateEngine engine = new MarkupTemplateEngine(config)
 
         Template template = engine.createTemplateByPath(templateScript);
+
         Map<String, Object> model = ctx
-        model.rm=model.model
-        model.c =  content
-        model.path=MgnlContext.contextPath
+        //TODO: how to prevent overwriting already existing entries?
+        model.rm = model.model
+        model.c = content
+        model.path= MgnlContext.contextPath
+
         Writable output = template.make(model)
         output.writeTo(renderingCtx.appendable)
     }
