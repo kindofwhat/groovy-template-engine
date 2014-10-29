@@ -16,7 +16,6 @@
   -->
   <properties>
     <magnoliaVersion>5.2.4</magnoliaVersion>
-    <groovyVersion>2.3.1</groovyVersion>
     <javaVersion>1.6</javaVersion>
   </properties>
 
@@ -45,19 +44,6 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>org.codehaus.groovy</groupId>
-          <artifactId>groovy-all</artifactId>
-          <!-- any version of Groovy \>= 1.8.2 should work here -->
-          <version>${groovyVersion}</version>
-      </dependency>
-         <!-- org.codehaus.groovy:groovy-templates:${groovyVersion -->
-      <dependency>
-          <groupId>org.codehaus.groovy</groupId>
-          <artifactId>groovy-templates</artifactId>
-          <version>${groovyVersion}</version>
-      </dependency>
-
 
       <dependency>
           <groupId>info.magnolia</groupId>
@@ -68,34 +54,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${groovyVersion}</version>
-        <configuration>
-          <source>${javaVersion}</source>
-          <target>${javaVersion}</target>
-        </configuration>
-      </plugin>
-        <plugin>
-            <groupId>org.codehaus.gmavenplus</groupId>
-            <artifactId>gmavenplus-plugin</artifactId>
-            <version>1.2</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>addSources</goal>
-                        <goal>addTestSources</goal>
-                        <goal>generateStubs</goal>
-                        <goal>compile</goal>
-                        <goal>testGenerateStubs</goal>
-                        <goal>testCompile</goal>
-                        <goal>removeStubs</goal>
-                        <goal>removeTestStubs</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -135,27 +93,5 @@
     </resources>
   </build>
 
-  <repositories>
-    <repository>
-      <id>magnolia.public</id>
-      <url>http://nexus.magnolia-cms.com/content/groups/public</url>
-      <snapshots>
-      </snapshots>
-    </repository>
-    <!-- IF YOU NEED MODULES FROM THE ENTERPRISE VERSION, UNCOMMENT THE FOLLOWING REPOSITORY -->
-    <!--
-    <repository>
-      <id>magnolia.enterprise.releases</id>
-      <url>http://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    -->
-    <repository>
-      <id>vaadin-addons</id>
-      <url>http://maven.vaadin.com/vaadin-addons</url>
-    </repository>
-  </repositories>
 
 </project>
